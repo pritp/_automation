@@ -19,4 +19,4 @@ Feature: Login feature
     Examples: 
       | username                     | password  | ExpectedText      |
       | abhishekj.jain@impetus.co.in | Abhishek1 | Hi, Abhishek Jain |
-      | user_1@fake.co.in            | user      | Hi, User          |
+     # | user_1@fake.co.in            | user      | Hi, User          |
