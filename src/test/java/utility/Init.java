@@ -18,6 +18,7 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -320,6 +321,9 @@ public class Init {
 		}else if("xpath".equals(locatorType)&&"static".equals(data_value)){
 			getBrowser().until(ExpectedConditions.elementToBeClickable(By.xpath(getLocator()))).sendKeys(this.staticValue);
 	
+		}else if("xpath".equals(locatorType)&&"static".equals(data_value)){
+			getBrowser().until(ExpectedConditions.elementToBeClickable(By.xpath(getLocator()))).sendKeys(this.staticValue);
+	
 		}
 		
 		if("name".equals(locatorType)&&!"click".equals(data_value)&&!"static".equals(data_value)){
@@ -336,20 +340,20 @@ public class Init {
 	
 	public void verifyTextOnGui(String element_path,String data_value){
 		setOR(element_path);
-		if("cssSelector".equals(locatorType)&&!"click".equals(data_value)){
+		if("cssSelector".equals(locatorType)){
 			String GUI_TEXT=getBrowser().until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(getLocator()))).getText();
 			
 			Assert.assertEquals(data_value, GUI_TEXT);
 	
 		}
 	
-		if("xpath".equals(locatorType)&&!"click".equals(data_value)){
+		if("xpath".equals(locatorType)){
 			String GUI_TEXT=getBrowser().until(ExpectedConditions.presenceOfElementLocated(By.xpath(getLocator()))).getText();
 			
 			Assert.assertEquals(data_value, GUI_TEXT);
 	
 		}
-		if("name".equals(locatorType)&&!"click".equals(data_value)){
+		if("name".equals(locatorType)){
 			String GUI_TEXT=getBrowser().until(ExpectedConditions.presenceOfElementLocated(By.name(getLocator()))).getText();
 			
 			Assert.assertEquals(data_value, GUI_TEXT);
@@ -366,9 +370,9 @@ public class Init {
 		if(list_of_elements.size()>0){
 			for(int i=0;i<list_of_elements.size();i++){
 				
-				//System.out.println("*************************** "+list_of_elements.get(i).getText());
+				System.out.println("*************************** "+list_of_elements.get(i).getText());
 				if(list_of_elements.get(i).getText().equals(feature_data)&&!list_of_elements.get(i).getText().equals("")){
-					System.out.println("*************************** "+list_of_elements.get(i).getText());
+					System.out.println("##################### "+list_of_elements.get(i).getText());
 					list_of_elements.get(i).findElement(By.tagName("input")).click();
 					break;
 				}
@@ -384,7 +388,7 @@ public class Init {
 		List<String> list= new ArrayList<String>();
 		for(int i=0;i<list_of_elements.size();i++){	
 				list.add(list_of_elements.get(i).getText()) ;
-				//System.out.println("**********"+list_of_elements.get(i).getText());
+				System.out.println("**********%%%%%%%%%%%%%%%%************"+list_of_elements.get(i).getText());
 		}
 		boolean flag=assertAnyOf(list,feature_data);
 		Assert.assertTrue(flag);
@@ -396,7 +400,7 @@ public class Init {
 		boolean flag=false;
 		for(int i=0;i<list.size();i++){
 			
-			if(list.get(i).equals(feature_data) ||  list.get(i).equals("")){
+			if(list.get(i).equals(feature_data)){
 				flag=true;
 				break;
 			}
@@ -413,7 +417,7 @@ public class Init {
 		try{
 		List<WebElement> list_of_elements=getBrowser().until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(getLocator())));
 		for(int i=0;i<list_of_elements.size();i++){
-			//System.out.println("----------"+feature_data+"---------"+list_of_elements.get(i).getText());
+			System.out.println("----------"+feature_data+"---------"+list_of_elements.get(i).getText());
 			if((list_of_elements.get(i).getAttribute("id")).equals(feature_data)){
 				//System.out.println("click");
 				try{
@@ -435,7 +439,16 @@ public class Init {
 		}
 	}
 	
-	
+	public void checkAlert() {
+	    try {
+	        WebDriverWait wait = new WebDriverWait(driver, 2);
+	        wait.until(ExpectedConditions.alertIsPresent());
+	        Alert alert = driver.switchTo().alert();
+	        alert.accept();
+	    } catch (Exception e) {
+	        //exception handling
+	    }
+	}
 	
 	public void wait(int x,String reason){
 		try {
