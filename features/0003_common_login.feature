@@ -1,4 +1,5 @@
 # A simple login feature
+@Censusflow
 Feature: Login feature
 
   Background: 
@@ -14,7 +15,6 @@ Feature: Login feature
     And click on SignIn
     And click on Agree
     Then user gets logged in successfully verify user name as "<ExpectedText>"
-    Then click on signout
 
     Examples: 
       | username                     | password  | ExpectedText      |

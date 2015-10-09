@@ -106,7 +106,7 @@ public class Init {
 	
 	
 	public  String readConfig(String string){
-		File file = new File("D:\\Att_workspace\\att_as\\config.properties");
+		File file = new File("config.properties");
 		InputStream input;
 		try {
 			input = new FileInputStream(file);
@@ -186,6 +186,11 @@ public class Init {
 	
 		list= this.getTDFieldList();
 		//System.out.println("list size"+list.size());
+		
+		/*for(int i=0;i<list.size();i++){
+			System.out.println("list value********************!!!!!!!!!!!!!!!!!!"+list.get(i));
+		}*/
+		
 		outerloop:
 			for(String TdName:list){
 	
@@ -372,7 +377,7 @@ public class Init {
 				
 				System.out.println("*************************** "+list_of_elements.get(i).getText());
 				if(list_of_elements.get(i).getText().equals(feature_data)&&!list_of_elements.get(i).getText().equals("")){
-					System.out.println("##################### "+list_of_elements.get(i).getText());
+					//System.out.println("##################### "+list_of_elements.get(i).getText());
 					list_of_elements.get(i).findElement(By.tagName("input")).click();
 					break;
 				}
@@ -381,6 +386,48 @@ public class Init {
 		
 			
 	}
+	public void dataMatcherTable(String string,String feature_data){
+		setOR(string);
+		List<WebElement> list_of_elements=getBrowser().until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(getLocator())));
+		
+		if(list_of_elements.size()>0){
+			for(int i=0;i<list_of_elements.size();i++){
+				
+				System.out.println("*************************** "+list_of_elements.get(i).getText());
+				if(list_of_elements.get(i).getText().equals(feature_data)&&!list_of_elements.get(i).getText().equals("")){
+					list_of_elements.get(i).click();
+					break;
+				}
+			}
+		}
+		
+			
+	}
+	
+	
+	public boolean dataMatcher(String string,String feature_data,String Carrier){
+		boolean flag=false;
+		setOR(string);
+		List<WebElement> list_of_elements=getBrowser().until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(getLocator())));
+		for(int i=0;i<list_of_elements.size();i++){	
+			list_of_elements.get(i).findElement(By.xpath("//preceding-sibling::*[1]")).getText();
+			System.out.println("!!!!!!!!"+list_of_elements.get(i).findElement(By.xpath(".//preceding-sibling::*[1]")).getText()+"!!!!!!!!"+Carrier);
+			if((list_of_elements.get(i).findElement(By.xpath(".//preceding-sibling::*[1]")).getText()).equals(Carrier)){
+				System.out.println("!!!!!!!!"+list_of_elements.get(i).getText()+"!!!!!!!!"+feature_data);
+				if(list_of_elements.get(i).getText().equals(feature_data)){
+					System.out.println("+++++"+list_of_elements.get(i).getText()+"+++"+
+				list_of_elements.get(i).findElement(By.xpath(".//preceding-sibling::*[1]")).getText());
+					 flag=true;
+				}
+				
+			}
+		}
+		return flag;	
+	}
+	
+	public void verifyData(String string,String feature_data,String Carrier){
+		Assert.assertTrue(dataMatcher(string,feature_data, Carrier));
+	}
 	
 	public void dataMatcherBarChart(String string,String feature_data){
 		setOR(string);
@@ -388,7 +435,7 @@ public class Init {
 		List<String> list= new ArrayList<String>();
 		for(int i=0;i<list_of_elements.size();i++){	
 				list.add(list_of_elements.get(i).getText()) ;
-				System.out.println("**********%%%%%%%%%%%%%%%%************"+list_of_elements.get(i).getText());
+				//System.out.println("**********%%%%%%%%%%%%%%%%************"+list_of_elements.get(i).getText());
 		}
 		boolean flag=assertAnyOf(list,feature_data);
 		Assert.assertTrue(flag);
@@ -417,7 +464,7 @@ public class Init {
 		try{
 		List<WebElement> list_of_elements=getBrowser().until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(getLocator())));
 		for(int i=0;i<list_of_elements.size();i++){
-			System.out.println("----------"+feature_data+"---------"+list_of_elements.get(i).getText());
+			//System.out.println("----------"+feature_data+"---------"+list_of_elements.get(i).getText());
 			if((list_of_elements.get(i).getAttribute("id")).equals(feature_data)){
 				//System.out.println("click");
 				try{
@@ -476,6 +523,12 @@ public class Init {
 		setOR(element_path);
 		getBrowser().until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(getLocator())));
 	}
+	
+	public void waitUntilVisibiltyOfText(String element_path){
+		setOR(element_path);
+		getBrowser().until(ExpectedConditions.visibilityOfElementLocated(By.xpath(getLocator())));
+	}
+
 	
 	public void browserQuit(){
 		driver.quit();

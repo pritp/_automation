@@ -72,26 +72,27 @@ Init initObject;
 
 	@Then("^verify att data with \"([^\"]*)\"$")
 	public void verify_att_data_with(String arg1) throws Throwable {
-	   initObject.dataMatcherBarChart("marketshare_comparision_bar_list", arg1);
+	   initObject.verifyData("marketshare_comparision_bar_list", arg1,"AT&T");
 	}
 
 	@Then("^verify verizon data with \"([^\"]*)\"$")
 	public void verify_verizon_data_with(String arg1) throws Throwable {
-		 initObject.dataMatcherBarChart("marketshare_comparision_bar_list", arg1);
+		 initObject.verifyData("marketshare_comparision_bar_list", arg1,"Verizon");
 	}
 
 	@Then("^verify sprint data with \"([^\"]*)\"$")
 	public void verify_sprint_data_with(String arg1) throws Throwable {
-		 initObject.dataMatcherBarChart("marketshare_comparision_bar_list", arg1);
+		 initObject.verifyData("marketshare_comparision_bar_list", arg1,"Sprint");
 	}
 
 	@Then("^verify tmobile data with \"([^\"]*)\"$")
 	public void verify_tmobile_data_with(String arg1) throws Throwable {
-		 initObject.dataMatcherBarChart("marketshare_comparision_bar_list", arg1);
+		 initObject.verifyData("marketshare_comparision_bar_list", arg1,"T-Mobile");
 	}
 
 	@Then("^verify other data with \"([^\"]*)\"$")
 	public void verify_other_data_with(String arg1) throws Throwable {
+		initObject.verifyData("marketshare_comparision_bar_list", arg1,"Other");
 		initObject.fetchOR("sign_out_dropdown", "click"); 
 		initObject.fetchOR("sign_out", "click");
 	}
