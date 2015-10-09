@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(format={"pretty","html:reports/test-report"}, 
-features={"features/"},tags={"@Censusflow"},
+features={"features/"},tags={"@ReportTab"},
 glue="test_cases",
 monochrome=true)
 public class Runner {

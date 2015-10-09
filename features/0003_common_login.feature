@@ -1,5 +1,5 @@
 # A simple login feature
-@Censusflow
+@Censusflow @ReportTab
 Feature: Login feature
 
   Background: 
