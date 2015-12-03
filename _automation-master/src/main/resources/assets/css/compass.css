@@ -1,0 +1,11 @@
+.hub-icon-container:hover .hub-icon {
+
+    -webkit-transform: rotate(-280deg);
+    -webkit-transform-origin: 67% 66%;
+}
+.hub-icon-container .hub-icon {
+
+    -webkit-transition: all 0.5s ease-in-out;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 65% 60%;
+}

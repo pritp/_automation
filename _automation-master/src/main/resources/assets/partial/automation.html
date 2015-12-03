@@ -1,0 +1,28 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div style="
+       font-size: medium;
+    letter-spacing: 15px;
+    margin-left: 10px;
+    margin-top: 20px;
+        color: white;"><b>Automation</b></div>
+</nav>
+<div ng-controller="commonController" class="row" style="margin-top: 125px;">
+    <div class="col-lg-4">
+    </div>
+    <div class="col-lg-4">
+        <div style="margin-left: -5px;"><b>Test cases</b></div>
+        <i class="fa fa-shield fa-rotate-270"></i>&nbsp;Market Share Flow <input ng-model="flow.value1" ng-true-value="'market'" type="checkbox"> <br>
+        <i class="fa fa-shield fa-rotate-270"></i>&nbsp;Census Flow <input ng-model="flow.value2"  ng-true-value="'census'" type="checkbox"> <br>
+        <i class="fa fa-shield fa-rotate-270"></i>&nbsp;Report Tab Flow <input ng-model="flow.value3"  ng-true-value="'report'" type="checkbox"> <br>
+        <i class="fa fa-shield fa-rotate-270"></i>&nbsp;Period Over Period Tab Flow <input ng-model="flow.value4"  ng-true-value="'pop'" type="checkbox"> <br>
+    </div><br>
+    <div ng-click="runflows(flow)" style="margin-top: 5%;
+    margin-left: -66%;" class="btn btn-inverse"><b>Run</b></div>
+    <div class="col-lg-4">
+        <div ng-show="runFlag" style="margin-top:30%;
+            margin-left: -110%;">
+            <i class="fa fa-cog fa-spin"></i>
+            <b>Please Wait</b>
+        </div>
+    </div>
+</div>

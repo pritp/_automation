@@ -1,0 +1,330 @@
+INFO  [2015-10-13 11:05:12,505] org.eclipse.jetty.util.log: Logging initialized @974ms
+WARN  [2015-10-13 11:05:12,584] com.google.common.cache.CacheBuilder: ignoring weigher specified without maximumWeight
+INFO  [2015-10-13 11:05:12,593] io.dropwizard.bundles.assets.ConfiguredAssetsBundle: Registering ConfiguredAssetBundle with name: assets for path /*
+INFO  [2015-10-13 11:05:12,598] io.dropwizard.server.ServerFactory: Starting AutomationService
+INFO  [2015-10-13 11:05:12,649] org.eclipse.jetty.setuid.SetUIDListener: Opened AutomationService@5e5d5333{HTTP/1.1}{0.0.0.0:9000}
+INFO  [2015-10-13 11:05:12,651] org.eclipse.jetty.server.Server: jetty-9.2.z-SNAPSHOT
+INFO  [2015-10-13 11:05:13,049] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /api/auto/flows (resources.FlowResource)
+
+INFO  [2015-10-13 11:05:13,053] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@257eae39{/,null,AVAILABLE}
+INFO  [2015-10-13 11:05:13,057] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+WARN  [2015-10-13 11:05:13,057] io.dropwizard.setup.AdminEnvironment: 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!    THIS APPLICATION HAS NO HEALTHCHECKS. THIS MEANS YOU WILL NEVER KNOW      !
+!     IF IT DIES IN PRODUCTION, WHICH MEANS YOU WILL NEVER KNOW IF YOU'RE      !
+!    LETTING YOUR USERS DOWN. YOU SHOULD ADD A HEALTHCHECK FOR EACH OF YOUR    !
+!         APPLICATION'S DEPENDENCIES WHICH FULLY (BUT LIGHTLY) TESTS IT.       !
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+INFO  [2015-10-13 11:05:13,061] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@3cb6737c{/admin,null,AVAILABLE}
+INFO  [2015-10-13 11:05:13,077] org.eclipse.jetty.server.ServerConnector: Started AutomationService@5e5d5333{HTTP/1.1}{0.0.0.0:9000}
+INFO  [2015-10-13 11:05:13,078] org.eclipse.jetty.server.Server: Started @1548ms
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:18 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 23
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /css/font-awesome.min.css HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 16
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /css/bootstrap.min.css HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 17
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /js/lib/bootstrap.min.js HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 5
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /js/lib/angular-route.js HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 29
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /js/lib/angular.min.js?version=1.4.2 HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 37
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /js/lib/jquery-1.11.3.min.js HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 38
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /js/controller/app.js HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 21
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /js/lib/ui-bootstrap-tpls-0.11.2.js HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 46
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /partial/automation.html HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 2
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /images/favicon.jpg HTTP/1.1" 404 302 "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 2
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /js/lib/jquery-1.11.3.min.js?_=1444734319200 HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 5
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /js/lib/angular.min.js?version=1.4.2&_=1444734319201 HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 7
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /js/lib/angular-route.js?_=1444734319202 HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 3
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /js/lib/ui-bootstrap-tpls-0.11.2.js?_=1444734319203 HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 6
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /js/controller/app.js?_=1444734319204 HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 2
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /js/lib/bootstrap.min.js?_=1444734319205 HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 2
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:19 +0000] "GET /fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 200 - "http://localhost:9000/css/font-awesome.min.css" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 3
+--------------start
+*************************** National
+*************************** Jun-2014
+*************************** Jul-2014
+*************************** Sep-2014
+*************************** Oct-2014
+*************************** Nov-2014
+*************************** Dec-2014
+*************************** All
+*************************** African American
+*************************** Asian
+*************************** Caucasian
+*************************** Hispanic
+*************************** All
+*************************** <50K
+*************************** 50K-100K
+*************************** 100K-150K
+*************************** >150K
+*************************** All
+*************************** Millennial [18-34]
+*************************** Gen X [35-54]
+*************************** Baby Boomer [55-74]
+*************************** Silent Generation [75+]
++++++30.3%+++AT&T
++++++36.3%+++Verizon
++++++15.4%+++Sprint
++++++15.2%+++T-Mobile
+++++++++Other
+*************************** National
+*************************** Region
+*************************** Jun-2014
+*************************** Jul-2014
+*************************** Sep-2014
+*************************** Oct-2014
+*************************** Nov-2014
+*************************** Dec-2014
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:06:44 +0000] "GET /css/font-awesome.min.css HTTP/1.1" 304 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 3
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:06:44 +0000] "GET /css/bootstrap.min.css HTTP/1.1" 304 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 4
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:06:44 +0000] "GET /angular.min.js.map HTTP/1.1" 404 302 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 1
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:06:44 +0000] "GET /js/lib/angular.min.js.map HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 46
+*************************** All
+*************************** African American
+*************************** Asian
+*************************** Caucasian
+*************************** Hispanic
+*************************** All
+*************************** <50K
+*************************** 50K-100K
+*************************** 100K-150K
+*************************** >150K
+*************************** All
+*************************** Millennial [18-34]
+*************************** Gen X [35-54]
+*************************** Baby Boomer [55-74]
+*************************** Silent Generation [75+]
++++++34.7%+++AT&T
++++++28.9%+++Verizon
++++++16.7%+++Sprint
++++++14.5%+++T-Mobile
++++++5.2%+++Other
+*************************** National
+*************************** Region
+*************************** Cluster
+*************************** Jun-2014
+*************************** Jul-2014
+*************************** Sep-2014
+*************************** Oct-2014
+*************************** Nov-2014
+*************************** Dec-2014
+*************************** Jan-2015
+*************************** Mar-2015
+*************************** May-2015
+*************************** Jun-2015
+*************************** All
+*************************** African American
+*************************** Asian
+*************************** All
+*************************** <50K
+*************************** 50K-100K
+*************************** 100K-150K
+*************************** >150K
+*************************** All
+*************************** Millennial [18-34]
+*************************** Gen X [35-54]
+*************************** Baby Boomer [55-74]
+*************************** Silent Generation [75+]
++++++29.9%+++AT&T
++++++23.5%+++Verizon
++++++16.2%+++Sprint
++++++26.5%+++T-Mobile
+++++++++Other
+*************************** National
+*************************** Region
+*************************** Cluster
+*************************** DMA
+*************************** Jun-2014
+*************************** Jul-2014
+*************************** Sep-2014
+*************************** Oct-2014
+*************************** Nov-2014
+*************************** Dec-2014
+*************************** Jan-2015
+*************************** Mar-2015
+*************************** May-2015
+*************************** Jun-2015
+*************************** All
+*************************** All
+*************************** <50K
+*************************** 50K-100K
+*************************** 100K-150K
+*************************** >150K
+*************************** All
+*************************** Millennial [18-34]
+*************************** Gen X [35-54]
+*************************** Baby Boomer [55-74]
+*************************** Silent Generation [75+]
+*************************** National
+*************************** Region
+*************************** Cluster
+*************************** DMA
+*************************** Local
+*************************** May-2015
+*************************** Jun-2015
+*************************** All
+*************************** African American
+*************************** Asian
+*************************** Caucasian
+*************************** Hispanic
+*************************** All
+*************************** <50K
+*************************** 50K-100K
+*************************** 100K-150K
+*************************** >150K
+*************************** All
+*************************** Millennial [18-34]
+*************************** Gen X [35-54]
+*************************** Baby Boomer [55-74]
+*************************** Silent Generation [75+]
+# A simple login feature
+@Censusflow @ReportTab @MarketShare
+Feature: Login feature
+
+  Background:  # 0000_common_login.feature:5
+     Log into GUI with valid credentials, Authorized user can successfully log into it
+     If credentilas are invalid it should throw invalid credentials.
+
+
+  @ReportTab @MarketShare @Censusflow
+  Scenario Outline: Authorized user login.                                        # 0000_common_login.feature:21
+    Given user enters the URL in URL address bar "URL" login page gets open       # Login.user_enters_the_URL_in_URL_address_bar_login_page_gets_open(String)
+    When user enters  email id "abhishekj.jain@impetus.co.in"                     # Login.user_enters_email_id(String)
+    And user enters  password "Abhishek1"                                         # Login.user_enters_password(String)
+    And click on Remember me                                                      # Login.click_on_Remember_me()
+    And click on SignIn                                                           # Login.click_on_SignIn()
+    And click on Agree                                                            # Login.Click_on_Agree()
+    Then user gets logged in successfully verify user name as "Hi, Abhishek Jain" # Login.user_gets_logged_in_successfully_verify_user_name_as(String)
+@MarketShare
+Feature: Market share Flow
+
+  Background: #User log in --> clicks on map view --> clicks on Map --> signout # 0002_market_share.feature:4
+
+  @MarketShare
+  Scenario Outline: Market share flow                 # 0002_market_share.feature:21
+    When user click on Map View with value "National" # MarketShare.user_click_on_Map_View_with_value(String)
+    And select date with value "Dec-2014"             # MarketShare.select_date_with_value(String)
+    And select on "" for associated map view.         # MarketShare.select_on_for_associated_map_view(String)
+    And select enthnicity  with value "null"          # MarketShare.select_enthnicity_with_value(String)
+    And select income Range with value "null"         # MarketShare.select_income_Range_with_value(String)
+    And select age group with value "null"            # MarketShare.select_age_group_with_value(String)
+    Then verify att data with "30.3%"                 # MarketShare.verify_att_data_with(String)
+    Then verify verizon data with "36.3%"             # MarketShare.verify_verizon_data_with(String)
+    Then verify sprint data with "15.4%"              # MarketShare.verify_sprint_data_with(String)
+    Then verify tmobile data with "15.2%"             # MarketShare.verify_tmobile_data_with(String)
+    Then verify other data with ""                    # MarketShare.verify_other_data_with(String)
+
+  Background: #User log in --> clicks on map view --> clicks on Map --> signout # 0002_market_share.feature:4
+
+  @MarketShare
+  Scenario Outline: Market share flow                # 0002_market_share.feature:22
+    When user click on Map View with value "Region"  # MarketShare.user_click_on_Map_View_with_value(String)
+    And select date with value "Dec-2014"            # MarketShare.select_date_with_value(String)
+    And select on "CENTRAL" for associated map view. # MarketShare.select_on_for_associated_map_view(String)
+    And select enthnicity  with value "null"         # MarketShare.select_enthnicity_with_value(String)
+    And select income Range with value "null"        # MarketShare.select_income_Range_with_value(String)
+    And select age group with value "null"           # MarketShare.select_age_group_with_value(String)
+    Then verify att data with "34.7%"                # MarketShare.verify_att_data_with(String)
+    Then verify verizon data with "28.9%"            # MarketShare.verify_verizon_data_with(String)
+    Then verify sprint data with "16.7%"             # MarketShare.verify_sprint_data_with(String)
+    Then verify tmobile data with "14.5%"            # MarketShare.verify_tmobile_data_with(String)
+    Then verify other data with "5.2%"               # MarketShare.verify_other_data_with(String)
+
+  Background: #User log in --> clicks on map view --> clicks on Map --> signout # 0002_market_share.feature:4
+
+  @MarketShare
+  Scenario Outline: Market share flow                          # 0002_market_share.feature:23
+    When user click on Map View with value "Cluster"           # MarketShare.user_click_on_Map_View_with_value(String)
+    And select date with value "Jun-2015"                      # MarketShare.select_date_with_value(String)
+    And select on "Chicago/Wisconsin" for associated map view. # MarketShare.select_on_for_associated_map_view(String)
+    And select enthnicity  with value "Asian"                  # MarketShare.select_enthnicity_with_value(String)
+    And select income Range with value "null"                  # MarketShare.select_income_Range_with_value(String)
+    And select age group with value "null"                     # MarketShare.select_age_group_with_value(String)
+    Then verify att data with "29.9%"                          # MarketShare.verify_att_data_with(String)
+    Then verify verizon data with "23.5%"                      # MarketShare.verify_verizon_data_with(String)
+    Then verify sprint data with "16.2%"                       # MarketShare.verify_sprint_data_with(String)
+    Then verify tmobile data with "26.5%"                      # MarketShare.verify_tmobile_data_with(String)
+    Then verify other data with ""                             # MarketShare.verify_other_data_with(String)
+
+  Background: #User log in --> clicks on map view --> clicks on Map --> signout # 0002_market_share.feature:4
+
+  @MarketShare
+  Scenario Outline: Market share flow            # 0002_market_share.feature:24
+    When user click on Map View with value "DMA" # MarketShare.user_click_on_Map_View_with_value(String)
+    And select date with value "Jun-2015"        # MarketShare.select_date_with_value(String)
+    And select on "501" for associated map view. # MarketShare.select_on_for_associated_map_view(String)
+    And select enthnicity  with value "All"      # MarketShare.select_enthnicity_with_value(String)
+    And select income Range with value "null"    # MarketShare.select_income_Range_with_value(String)
+    And select age group with value "null"       # MarketShare.select_age_group_with_value(String)
+    Then verify att data with "22.1%"            # MarketShare.verify_att_data_with(String)
+      java.lang.AssertionError
+      	at org.junit.Assert.fail(Assert.java:86)
+      	at org.junit.Assert.assertTrue(Assert.java:41)
+      	at org.junit.Assert.assertTrue(Assert.java:52)
+      	at utility.Init.verifyData(Init.java:473)
+      	at test_cases.MarketShare.verify_att_data_with(MarketShare.java:75)
+      	at ?.Then verify att data with "22.1%"(0002_market_share.feature:13)
+
+    Then verify verizon data with "35.5%"        # MarketShare.verify_verizon_data_with(String)
+    Then verify sprint data with "16.0%"         # MarketShare.verify_sprint_data_with(String)
+    Then verify tmobile data with "26.4%"        # MarketShare.verify_tmobile_data_with(String)
+    Then verify other data with ""               # MarketShare.verify_other_data_with(String)
+
+  Background: #User log in --> clicks on map view --> clicks on Map --> signout # 0002_market_share.feature:4
+
+  @MarketShare
+  Scenario Outline: Market share flow              # 0002_market_share.feature:25
+    When user click on Map View with value "Local" # MarketShare.user_click_on_Map_View_with_value(String)
+    And select date with value "Jun-2015"          # MarketShare.select_date_with_value(String)
+    And select on "10" for associated map view.    # MarketShare.select_on_for_associated_map_view(String)
+    And select enthnicity  with value "null"       # MarketShare.select_enthnicity_with_value(String)
+    And select income Range with value "null"      # MarketShare.select_income_Range_with_value(String)
+    And select age group with value "null"         # MarketShare.select_age_group_with_value(String)
+    Then verify att data with "24.7%"              # MarketShare.verify_att_data_with(String)
+      java.lang.AssertionError
+      	at org.junit.Assert.fail(Assert.java:86)
+      	at org.junit.Assert.assertTrue(Assert.java:41)
+      	at org.junit.Assert.assertTrue(Assert.java:52)
+      	at utility.Init.verifyData(Init.java:473)
+      	at test_cases.MarketShare.verify_att_data_with(MarketShare.java:75)
+      	at ?.Then verify att data with "24.7%"(0002_market_share.feature:13)
+
+    Then verify verizon data with "59.0%"          # MarketShare.verify_verizon_data_with(String)
+    Then verify sprint data with "13.1%"           # MarketShare.verify_sprint_data_with(String)
+    Then verify tmobile data with ""               # MarketShare.verify_tmobile_data_with(String)
+    Then verify other data with ""                 # MarketShare.verify_other_data_with(String)
+@Censusflow @ReportTab @MarketShare
+Feature: Login feature
+
+  Scenario: Authorized user login. # 1000_sign_out.feature:4
+    When click on signout          # Login.click_on_signout()
+
+7 Scenarios (2 failed, 5 passed)
+63 Steps (2 failed, 8 skipped, 53 passed)
+3m48.677s
+
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at utility.Init.verifyData(Init.java:473)
+	at test_cases.MarketShare.verify_att_data_with(MarketShare.java:75)
+	at ?.Then verify att data with "22.1%"(0002_market_share.feature:13)
+
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at utility.Init.verifyData(Init.java:473)
+	at test_cases.MarketShare.verify_att_data_with(MarketShare.java:75)
+	at ?.Then verify att data with "24.7%"(0002_market_share.feature:13)
+
+--------------end
+exception : java.lang.NullPointerException
+exception : java.lang.NullPointerException
+0:0:0:0:0:0:0:1 - - [13/Oct/2015:11:05:24 +0000] "GET /api/auto/flows?market_flow=market HTTP/1.1" 200 - "http://localhost:9000/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.2.2454.18 Safari/537.36" 230109

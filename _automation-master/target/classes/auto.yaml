@@ -1,0 +1,38 @@
+server:
+  type: simple
+  applicationContextPath: /
+  adminContextPath: /admin
+  rootPath: '/api/*'
+  connector:
+    type: http
+    port: 9000
+  requestLog:
+    timeZone: UTC
+    appenders:
+      - type: console
+        threshold: ALL
+        timeZone: UTC
+        target: stdout
+      - type: file
+        currentLogFilename: ./log/requests.log
+        threshold: ALL
+        archive: true
+        archivedLogFilenamePattern: ./log/requests-%d.log.gz
+        archivedFileCount: 15
+        timeZone: UTC
+  
+    
+assets:
+  overrides:
+   /: src/resources/assets/
+
+
+
+logging:
+  level: INFO
+  appenders:
+    - type: console
+      threshold: ALL
+      timeZone: UTC
+      target: stdout
+      logFormat: # TODO
